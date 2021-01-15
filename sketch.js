@@ -71,7 +71,7 @@ function setup() {
 
   
   trex.setCollider("rectangle",0,0,trex.width,trex.height);
-  trex.debug = true
+  trex.debug = false
   
   score = 0;
   
@@ -102,7 +102,7 @@ function draw() {
     }
     
     //jump when the space key is pressed
-    if(keyDown("space")&& trex.y >= 100) {
+    if(mouseIsPressed||keyDown("space")&& trex.y >= 160) {
         trex.velocityY = -12;
         jumpSound.play();
     }
@@ -158,7 +158,12 @@ function draw() {
 }
 
 function reset(){
-  
+  gameState=PLAY
+  obstaclesGroup.destroyEach();
+  cloudsGroup.destroyEach();
+  score=0;
+  trex.changeAnimation("running",trex_running)
+}
 
 }
 
