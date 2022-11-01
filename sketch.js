@@ -36,7 +36,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(600, 200);
+  createCanvas(650, 240);
 
   var message = "This is a message";
  console.log(message)
@@ -79,7 +79,7 @@ function setup() {
 
 function draw() {
   
-  background(180);
+  background(256);
   //displaying score
   text("Score: "+ score, 500,50);
   
@@ -192,7 +192,7 @@ function spawnObstacles(){
     }
    
     //assign scale and lifetime to the obstacle           
-    obstacle.scale = 0.5;
+    obstacle.scale = 0.18;
     obstacle.lifetime = 300;
    
    //add each obstacle to the group
