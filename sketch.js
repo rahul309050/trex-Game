@@ -36,7 +36,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(650, 240);
+  createCanvas(700, 240);
 
   var message = "This is a message";
  console.log(message)
@@ -192,7 +192,7 @@ function spawnObstacles(){
     }
    
     //assign scale and lifetime to the obstacle           
-    obstacle.scale = 0.18;
+    obstacle.scale = 0.2;
     obstacle.lifetime = 300;
    
    //add each obstacle to the group
@@ -220,3 +220,4 @@ function spawnClouds() {
     cloudsGroup.add(cloud);
   }
 }
+
